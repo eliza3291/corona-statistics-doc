@@ -1,0 +1,147 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>corona-statistics documentation</title>
+    <base href="https://eliza3291.github.io/corona-statistics-doc/" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top visible-xs">
+        <a href="./" class="navbar-brand">corona-statistics documentation</a>
+        <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+    </div>
+
+    <div class="xs-menu menu" id="mobile-menu">
+        <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>
+        <compodoc-menu></compodoc-menu>
+    </div>
+
+    <div class="container-fluid main">
+        <div class="row main">
+            <div class="hidden-xs menu">
+                <compodoc-menu mode="normal"></compodoc-menu>
+            </div>
+            <!-- START CONTENT -->
+            <div class="content getting-started">
+                <div class="content-data">
+
+                    <h1 id="chart_with_downwards_trend-corona-statistics-project">:chart_with_downwards_trend: Corona
+                        Statistics Project</h1>
+                    <p>Simple web application, completely responsive to show Corona statistics about Germany allowing
+                        the user to select between the next timeframes from now:</p>
+                    <ul>
+                        <li>Last Week.</li>
+                        <li>Last 2 Weeks.</li>
+                        <li>Last 3 Weeks.</li>
+                        <li>Last 4 Weeks.</li>
+                    </ul>
+                    <p>Note: Timeframes can be changed inside <code>src/app/common/data/timeframe.data.ts</code></p>
+                    <h2 id="hammer_and_wrench-angular">:hammer_and_wrench: Angular</h2>
+                    <p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a>
+                        version 11.2.10.</p>
+                    <p>I like to work with a local version of Angular CLI, so I create some scripts to make easier
+                        running commands.</p>
+                    <h2 id="build">Build</h2>
+                    <p>Run <code>npm run build:production:compress</code> to build the project minifying the HTML files
+                        and compressing (scss,js,html,json,ico,svg) files with gzip and brotli.</p>
+                    <p>Note: For more information check the scripts inside package.</p>
+                    <h2 id="documentation">Documentation</h2>
+                    <p>Run <code>npm run compodoc</code> to generate a the project documentation using Compodoc.</p>
+                    <h2 id="tests">Tests</h2>
+                    <p>Run <code>npm run test</code> will check lint and prettier format before running all unit tests.
+                    </p>
+                    <h2 id="bundle-size">Bundle size</h2>
+                    <p>Run <code>npm run build:production:analyze</code> will analize the bundle size of the project
+                        with webpack-bundle-analyzer.</p>
+                    <h2 id="file_cabinet-data-source">:file_cabinet: Data Source</h2>
+                    <p>Robert Koch-Institut: <a href="https://npgeo-corona-npgeo-de.hub.arcgis.com/">COVID-19</a></p>
+                    <h2 id="clap-credits">:clap: Credits</h2>
+                    <h3 id="earth_africa-svg-germany-map">:earth_africa: SVG Germany Map</h3>
+                    <p>Free SVG Maps from <a href="https://www.amcharts.com/svg-maps/?map=germany">AMCHARTS</a></p>
+                    <h3 id="de-icon-germany-map">:de: Icon (Germany map)</h3>
+                    <p>Flag map of Germany from <a
+                            href="https://en.wikipedia.org/wiki/File:Flag_map_of_Germany.svg">Wikimedia Commons</a></p>
+                    <h3 id="nail_care-angular-template">:nail_care: Angular Template</h3>
+                    <p>Xtreme Angular 11 Admin Lite from <a
+                            href="https://www.wrappixel.com/templates/xtreme-angular-lite/">WrapPixel</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <div class="search-results">
+                    <div class="has-results">
+                        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching
+                            "<span class='search-query'></span>"</h1>
+                        <ul class="search-results-list"></ul>
+                    </div>
+                    <div class="no-results">
+                        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- END CONTENT -->
+        </div>
+    </div>
+
+    <script>
+        var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+        var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+        var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+        var MAX_SEARCH_RESULTS = 15;
+    </script>
+
+    <script src="./js/libs/custom-elements.min.js"></script>
+    <script src="./js/libs/lit-html.js"></script>
+    <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+    <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+    <script src="./js/menu-wc.js" defer></script>
+
+    <script src="./js/libs/bootstrap-native.js"></script>
+
+    <script src="./js/libs/es6-shim.min.js"></script>
+    <script src="./js/libs/EventDispatcher.js"></script>
+    <script src="./js/libs/promise.min.js"></script>
+    <script src="./js/libs/zepto.min.js"></script>
+
+    <script src="./js/compodoc.js"></script>
+
+    <script src="./js/tabs.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/libs/clipboard.min.js"></script>
+    <script src="./js/libs/prism.js"></script>
+    <script src="./js/sourceCode.js"></script>
+    <script src="./js/search/search.js"></script>
+    <script src="./js/search/lunr.min.js"></script>
+    <script src="./js/search/search-lunr.js"></script>
+    <script src="./js/search/search_index.js"></script>
+    <script src="./js/lazy-load-graphs.js"></script>
+
+
+</body>
+
+</html>
