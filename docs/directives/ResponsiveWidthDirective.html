@@ -58,6 +58,13 @@
             <code>src/app/common/directives/responsive-width/responsive-width.directive.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Directive that will assign the input width to the element </p>
+
+            </p>
 
             <p class="comment">
                 <h3>Implements</h3>
@@ -134,7 +141,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/common/directives/responsive-width/responsive-width.directive.ts:7</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/common/directives/responsive-width/responsive-width.directive.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -190,7 +197,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/common/directives/responsive-width/responsive-width.directive.ts:7</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/common/directives/responsive-width/responsive-width.directive.ts:8</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -226,14 +233,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="11"
-                            class="link-to-prism">src/app/common/directives/responsive-width/responsive-width.directive.ts:11</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="13"
+                            class="link-to-prism">src/app/common/directives/responsive-width/responsive-width.directive.ts:13</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>For every change in input, assign the width or unseted. </p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -283,6 +292,7 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Directive, ElementRef, Input, OnChanges, SimpleChanges } from &#x27;@angular/core&#x27;;
 
+/** Directive that will assign the input width to the element */
 @Directive({
 	selector: &#x27;[appResponsiveWidth]&#x27;
 })
@@ -291,6 +301,7 @@ export class ResponsiveWidthDirective implements OnChanges {
 
 	constructor(private elmRef: ElementRef&lt;HTMLElement&gt;) {}
 
+	/** For every change in input, assign the width or unseted. */
 	ngOnChanges(changes: SimpleChanges): void {
 		if (changes.appResponsiveWidth &amp;&amp; typeof this.appResponsiveWidth !&#x3D;&#x3D; &#x27;undefined&#x27;) {
 			this.elmRef.nativeElement.style.width &#x3D; this.appResponsiveWidth &gt; 0 ? &#x60;${this.appResponsiveWidth}px&#x60; : &#x27;unset&#x27;;

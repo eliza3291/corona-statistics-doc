@@ -63,6 +63,13 @@
             <code>src/app/common/models/line-chart.model.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Array with LineChartSeries data. </p>
+
+            </p>
 
             <p class="comment">
                 <h3>Extends</h3>
@@ -122,7 +129,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="1" class="link-to-prism">src/app/common/models/line-chart.model.ts:1</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="2" class="link-to-prism">src/app/common/models/line-chart.model.ts:2</a></div>
                             </td>
                         </tr>
 
@@ -158,14 +165,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="14"
-                            class="link-to-prism">src/app/common/models/line-chart.model.ts:14</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="17"
+                            class="link-to-prism">src/app/common/models/line-chart.model.ts:17</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Add series to specific data </p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -246,14 +255,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="18"
-                            class="link-to-prism">src/app/common/models/line-chart.model.ts:18</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="22"
+                            class="link-to-prism">src/app/common/models/line-chart.model.ts:22</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Push a serie inside an already existing series array </p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -328,14 +339,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="27"
-                            class="link-to-prism">src/app/common/models/line-chart.model.ts:27</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/common/models/line-chart.model.ts:32</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Get the maximum length of timeseries </p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
@@ -369,14 +382,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="6"
-                            class="link-to-prism">src/app/common/models/line-chart.model.ts:6</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="8"
+                            class="link-to-prism">src/app/common/models/line-chart.model.ts:8</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Initialize Linechart with values </p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -432,6 +447,7 @@
 		super(0);
 	}
 
+	/** Initialize Linechart with values */
 	static initializeLineChart(lineChartSeries: LineChartSeries[]): LineChart {
 		const lineChart &#x3D; new LineChart();
 		lineChartSeries.forEach((element) &#x3D;&gt; {
@@ -440,10 +456,12 @@
 		return lineChart;
 	}
 
+	/** Add series to specific data */
 	addSeries(name: string, series: Serie[] &#x3D; []): number {
 		return this.push({ name, series });
 	}
 
+	/** Push a serie inside an already existing series array */
 	addSerieToSeries(name: string, serie: Serie): LineChartSeries {
 		let seriesIndex &#x3D; this.findIndex((element) &#x3D;&gt; (element.name &#x3D; name));
 		if (seriesIndex &#x3D;&#x3D;&#x3D; -1) {
@@ -453,6 +471,7 @@
 		return this[seriesIndex];
 	}
 
+	/** Get the maximum length of timeseries */
 	getMaxLength(): number {
 		let max &#x3D; 0;
 		this.forEach((serie) &#x3D;&gt; {
@@ -464,16 +483,19 @@
 	}
 }
 
+/** Expected structure for every serie by the Ngx Charts library */
 export interface Serie {
 	name: string;
 	value: number;
 }
 
+/** Expected structure for series by the Ngx Charts library  */
 export interface LineChartSeries {
 	name: string;
 	series: Serie[];
 }
 
+/** Breakpoints to allow responsiveness  */
 export interface BreakpointItem {
 	width: number;
 	nrItems: number;

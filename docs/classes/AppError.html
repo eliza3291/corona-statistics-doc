@@ -63,6 +63,13 @@
             <code>src/app/common/models/error.model.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Errors from the app, convert all error to same class </p>
+
+            </p>
 
             <p class="comment">
                 <h3>Extends</h3>
@@ -144,7 +151,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/common/models/error.model.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/common/models/error.model.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -208,7 +215,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/common/models/error.model.ts:18</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/common/models/error.model.ts:16</a></div>
                             </td>
                         </tr>
 
@@ -236,7 +243,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/common/models/error.model.ts:19</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/common/models/error.model.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -265,13 +272,13 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/common/models/error.model.ts:17</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/common/models/error.model.ts:15</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                        <div class="io-description"><p>Save complete url can be helpful to fix errors.</p>
+                        <div class="io-description"><p>Save url can be helpful to fix errors. </p>
 </div>
                     </td>
                 </tr>
@@ -307,15 +314,15 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="53"
-                            class="link-to-prism">src/app/common/models/error.model.ts:53</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="52"
+                            class="link-to-prism">src/app/common/models/error.model.ts:52</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-description"><p>Write user friendly messages for the possible error codes</p>
+                    <div class="io-description"><p>Write user friendly messages for the possible error codes </p>
 </div>
 
                     <div class="io-description">
@@ -381,14 +388,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/app/common/models/error.model.ts:28</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/common/models/error.model.ts:27</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Initialize AppError from Error </p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -461,6 +470,8 @@
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Initialize AppError from HttpErrorResponse </p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -513,20 +524,18 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { HttpErrorResponse } from &#x27;@angular/common/http&#x27;;
 
-/**
- * Merge response model from API with Error lib model
- */
+/** Merge response model from API with Error lib model */
 export interface CustomAppError {
 	code?: number;
 	name?: string;
 	message: string;
+	/** Further information about the error. */
 	details?: string;
 }
 
+/** Errors from the app, convert all error to same class */
 export class AppError extends Error {
-	/**
-	 * Save complete url can be helpful to fix errors.
-	 */
+	/** Save url can be helpful to fix errors. */
 	public url?: string;
 	public appError: CustomAppError;
 	public translatedMessage: string;
@@ -538,6 +547,7 @@ export class AppError extends Error {
 		this.translatedMessage &#x3D; message;
 	}
 
+	/** Initialize AppError from Error */
 	static initializeError(error: Error): AppError {
 		const newAppError &#x3D; new AppError(error.message);
 		newAppError.appError &#x3D; {
@@ -549,6 +559,7 @@ export class AppError extends Error {
 		return newAppError;
 	}
 
+	/** Initialize AppError from HttpErrorResponse */
 	static initializeHttpResponseError(error: HttpErrorResponse): AppError {
 		const newAppError &#x3D; new AppError(error.message);
 		newAppError.appError &#x3D; {
@@ -560,9 +571,8 @@ export class AppError extends Error {
 		newAppError.translatedMessage &#x3D; newAppError.getMessageFromCode(error.status) || error.statusText;
 		return newAppError;
 	}
-	/**
-	 * Write user friendly messages for the possible error codes
-	 */
+
+	/** Write user friendly messages for the possible error codes */
 	getMessageFromCode(code: number): string | undefined {
 		if (!navigator.onLine) {
 			return &#x27;Hey! You are offline. Please check your internet connection and reload the page.&#x27;;

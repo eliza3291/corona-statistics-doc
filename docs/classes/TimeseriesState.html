@@ -63,6 +63,13 @@
             <code>src/app/common/models/germany.model.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Definition of timeseries for a state </p>
+
+            </p>
 
 
 
@@ -126,7 +133,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/common/models/germany.model.ts:60</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/common/models/germany.model.ts:70</a></div>
                             </td>
                         </tr>
 
@@ -190,7 +197,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="60" class="link-to-prism">src/app/common/models/germany.model.ts:60</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/common/models/germany.model.ts:70</a></div>
                             </td>
                         </tr>
 
@@ -218,7 +225,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/common/models/germany.model.ts:59</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/common/models/germany.model.ts:69</a></div>
                             </td>
                         </tr>
 
@@ -256,14 +263,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="67"
-                            class="link-to-prism">src/app/common/models/germany.model.ts:67</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="78"
+                            class="link-to-prism">src/app/common/models/germany.model.ts:78</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Initialize TimeseriesState with values </p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -328,11 +337,13 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { LineChart } from &#x27;./line-chart.model&#x27;;
 
+/** Array with timeseries data. */
 export class Timeseries extends Array&lt;TimeseriesData&gt; {
 	constructor() {
 		super(0);
 	}
 
+	/** Initialize Timeseries with values */
 	static initializeClass(timeseriesData: TimeseriesData[]): Timeseries {
 		const timeseries &#x3D; new Timeseries();
 		timeseriesData.forEach((element) &#x3D;&gt; {
@@ -346,18 +357,22 @@ export class Timeseries extends Array&lt;TimeseriesData&gt; {
 		return timeseries;
 	}
 
+	/** Summary of total cases */
 	getTotalCases(): number {
 		return this.reduce((a, b) &#x3D;&gt; a + (b.cases || 0), 0);
 	}
 
+	/** Summary of total deaths */
 	getTotalDeaths(): number {
 		return this.reduce((a, b) &#x3D;&gt; a + (b.deaths || 0), 0);
 	}
 
+	/** Summary of total recovered */
 	getTotalRecovered(): number {
 		return this.reduce((a, b) &#x3D;&gt; a + (b.recovered || 0), 0);
 	}
 
+	/** Convert timeseries data to line chart */
 	getChartSeries(name: string): LineChart {
 		const lineChart &#x3D; new LineChart();
 		lineChart.addSeries(name);
@@ -368,21 +383,25 @@ export class Timeseries extends Array&lt;TimeseriesData&gt; {
 		return lineChart;
 	}
 
+	/** Add a new serie */
 	addSeries(data: TimeseriesData): number {
 		return this.push(data);
 	}
 }
 
+/** Data structure with date for timeseries */
 export interface TimeseriesData extends Data {
 	date: string;
 }
 
+/** Data structure to map the response */
 export interface Data {
 	cases: number;
 	deaths: number;
 	recovered: number;
 }
 
+/** Definition of timeseries for a state */
 export class TimeseriesState {
 	public idState: number;
 	public data: Timeseries;
@@ -392,6 +411,7 @@ export class TimeseriesState {
 		this.data &#x3D; new Timeseries();
 	}
 
+	/** Initialize TimeseriesState with values */
 	static initializeClass(idState: number, data: TimeseriesData[]): TimeseriesState {
 		const timeseriesState &#x3D; new TimeseriesState(idState);
 		data.forEach((element) &#x3D;&gt; {

@@ -64,6 +64,15 @@
     <code>src/app/core/core.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component with the layout of the webapp
+Header, footer, breadcrumbs and components that will be always shown
+should be part of the core module and childs of this component.</p>
+
+    </p>
 
 
 
@@ -190,7 +199,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/core/core.component.ts:10</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/core/core.component.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -205,6 +214,11 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, ViewEncapsulation } from &#x27;@angular/core&#x27;;
 
+/**
+ * Component with the layout of the webapp
+ * Header, footer, breadcrumbs and components that will be always shown
+ * should be part of the core module and childs of this component.
+ */
 @Component({
 	selector: &#x27;app-core&#x27;,
 	templateUrl: &#x27;./core.component.html&#x27;,
@@ -232,8 +246,14 @@ export class CoreComponent {
         <pre class="line-numbers"><code class="language-html">&lt;!-- &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; --&gt;
 &lt;!-- Main wrapper - style you can find in pages.scss --&gt;
 &lt;!-- &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; --&gt;
-&lt;div id&#x3D;&quot;main-wrapper&quot; dir&#x3D;&quot;ltr&quot; data-theme&#x3D;&quot;light&quot; data-layout&#x3D;&quot;vertical&quot; data-header-position&#x3D;&quot;fixed&quot;
-	data-boxed-layout&#x3D;&quot;full&quot;&gt;
+&lt;div
+	id&#x3D;&quot;main-wrapper&quot;
+	dir&#x3D;&quot;ltr&quot;
+	data-theme&#x3D;&quot;light&quot;
+	data-layout&#x3D;&quot;vertical&quot;
+	data-header-position&#x3D;&quot;fixed&quot;
+	data-boxed-layout&#x3D;&quot;full&quot;
+&gt;
 	&lt;!-- &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; --&gt;
 	&lt;!-- Topbar header - style you can find in topbar.scss --&gt;
 	&lt;!-- &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; --&gt;
@@ -286,13 +306,25 @@ export class CoreComponent {
 		&lt;!-- &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; --&gt;
 		&lt;!-- footer --&gt;
 		&lt;!-- &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; --&gt;
-		&lt;footer class&#x3D;&quot;footer text-right&quot;&gt;
-			&lt;a href&#x3D;&quot;https://github.com/eliza3291/corona-statistics&quot;&gt;
-				&lt;p class&#x3D;&quot;h3 mb-0&quot;&gt;&lt;i class&#x3D;&quot;fab fa-github&quot;&gt;&lt;/i&gt;&lt;/p&gt;
-			&lt;/a&gt;
-			&lt;a href&#x3D;&quot;https://eliza3291.github.io/corona-statistics-doc/&quot;&gt;
-				&lt;p class&#x3D;&quot;h3 mb-0&quot;&gt;&lt;i class&#x3D;&quot;fas fa-book&quot;&gt;&lt;/i&gt;&lt;/p&gt;
-			&lt;/a&gt;
+		&lt;footer class&#x3D;&quot;footer&quot;&gt;
+			&lt;div class&#x3D;&quot;row justify-content-end align-items-center&quot;&gt;
+				&lt;div class&#x3D;&quot;col-auto text-body&quot;&gt;
+					Made with &lt;i class&#x3D;&quot;fas fa-heart&quot;&gt;&lt;/i&gt; by
+					&lt;a class&#x3D;&quot;text-secondary&quot; href&#x3D;&quot;https://www.linkedin.com/in/elizabeth-morales-bermudez/&quot;
+						&gt;&lt;strong&gt;Elizabeth&lt;/strong&gt;&lt;/a
+					&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;col-auto ml-auto text-body&quot;&gt;
+					&lt;a class&#x3D;&quot;fa-2x text-secondary&quot; href&#x3D;&quot;https://github.com/eliza3291/corona-statistics&quot;&gt;
+						&lt;p class&#x3D;&quot;h3 mb-0&quot;&gt;&lt;i class&#x3D;&quot;fab fa-github&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+					&lt;/a&gt;
+				&lt;/div&gt;
+				&lt;div class&#x3D;&quot;col-auto&quot;&gt;
+					&lt;a class&#x3D;&quot;fa-2x text-secondary&quot; href&#x3D;&quot;https://eliza3291.github.io/corona-statistics-doc/&quot;&gt;
+						&lt;p class&#x3D;&quot;h3 mb-0&quot;&gt;&lt;i class&#x3D;&quot;fas fa-book&quot;&gt;&lt;/i&gt;&lt;/p&gt;
+					&lt;/a&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
 		&lt;/footer&gt;
 		&lt;!-- &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; --&gt;
 		&lt;!-- End footer --&gt;
@@ -301,7 +333,8 @@ export class CoreComponent {
 	&lt;!-- &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; --&gt;
 	&lt;!-- End Page wrapper  --&gt;
 	&lt;!-- &#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D; --&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
@@ -510,7 +543,7 @@ Vertical layout
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- ============================================================== --><!-- Main wrapper - style you can find in pages.scss --><!-- ============================================================== --><div id="main-wrapper" dir="ltr" data-theme="light" data-layout="vertical" data-header-position="fixed"	data-boxed-layout="full">	<!-- ============================================================== -->	<!-- Topbar header - style you can find in topbar.scss -->	<!-- ============================================================== -->	<header class="topbar" data-navbarbg="skin6">		<nav class="d-flex top-navbar navbar-expand-md navbar-light">			<div class="navbar-header" [attr.data-logobg]="options.logobg">				<!-- ============================================================== -->				<!-- Logo -->				<!-- ============================================================== -->				<a class="navbar-brand" href="/">					<!-- Logo icon -->					<b class="logo-icon">						<!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->						<!-- Light Logo icon -->						<img src="assets/images/logo-icon.png" alt="homepage" class="light-logo" />					</b>					<!--End Logo icon -->					<!-- Logo text -->					<span class="logo-text">						<!-- Light Logo text -->						<img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" />					</span>				</a>				<!-- ============================================================== -->				<!-- End Logo -->				<!-- ============================================================== -->			</div>		</nav>	</header>	<!-- ============================================================== -->	<!-- Page wrapper  -->	<!-- ============================================================== -->	<div class="page-wrapper">		<!-- ============================================================== -->		<!-- Container fluid  -->		<!-- ============================================================== -->		<app-breadcrumb></app-breadcrumb>		<div class="container-fluid">			<!-- ============================================================== -->			<!-- Start Page Content -->			<!-- ============================================================== -->			<router-outlet></router-outlet>			<!-- ============================================================== -->			<!-- End Start Page Content -->			<!-- ============================================================== -->		</div>		<!-- ============================================================== -->		<!-- End Container fluid  -->		<!-- ============================================================== -->		<!-- ============================================================== -->		<!-- footer -->		<!-- ============================================================== -->		<footer class="footer text-right">			<a href="https://github.com/eliza3291/corona-statistics">				<p class="h3 mb-0"><i class="fab fa-github"></i></p>			</a>			<a href="https://eliza3291.github.io/corona-statistics-doc/">				<p class="h3 mb-0"><i class="fas fa-book"></i></p>			</a>		</footer>		<!-- ============================================================== -->		<!-- End footer -->		<!-- ============================================================== -->	</div>	<!-- ============================================================== -->	<!-- End Page wrapper  -->	<!-- ============================================================== --></div></div>'
+        var COMPONENT_TEMPLATE = '<div><!-- ============================================================== --><!-- Main wrapper - style you can find in pages.scss --><!-- ============================================================== --><div	id="main-wrapper"	dir="ltr"	data-theme="light"	data-layout="vertical"	data-header-position="fixed"	data-boxed-layout="full">	<!-- ============================================================== -->	<!-- Topbar header - style you can find in topbar.scss -->	<!-- ============================================================== -->	<header class="topbar" data-navbarbg="skin6">		<nav class="d-flex top-navbar navbar-expand-md navbar-light">			<div class="navbar-header" [attr.data-logobg]="options.logobg">				<!-- ============================================================== -->				<!-- Logo -->				<!-- ============================================================== -->				<a class="navbar-brand" href="/">					<!-- Logo icon -->					<b class="logo-icon">						<!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->						<!-- Light Logo icon -->						<img src="assets/images/logo-icon.png" alt="homepage" class="light-logo" />					</b>					<!--End Logo icon -->					<!-- Logo text -->					<span class="logo-text">						<!-- Light Logo text -->						<img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" />					</span>				</a>				<!-- ============================================================== -->				<!-- End Logo -->				<!-- ============================================================== -->			</div>		</nav>	</header>	<!-- ============================================================== -->	<!-- Page wrapper  -->	<!-- ============================================================== -->	<div class="page-wrapper">		<!-- ============================================================== -->		<!-- Container fluid  -->		<!-- ============================================================== -->		<app-breadcrumb></app-breadcrumb>		<div class="container-fluid">			<!-- ============================================================== -->			<!-- Start Page Content -->			<!-- ============================================================== -->			<router-outlet></router-outlet>			<!-- ============================================================== -->			<!-- End Start Page Content -->			<!-- ============================================================== -->		</div>		<!-- ============================================================== -->		<!-- End Container fluid  -->		<!-- ============================================================== -->		<!-- ============================================================== -->		<!-- footer -->		<!-- ============================================================== -->		<footer class="footer">			<div class="row justify-content-end align-items-center">				<div class="col-auto text-body">					Made with <i class="fas fa-heart"></i> by					<a class="text-secondary" href="https://www.linkedin.com/in/elizabeth-morales-bermudez/"						><strong>Elizabeth</strong></a					>				</div>				<div class="col-auto ml-auto text-body">					<a class="fa-2x text-secondary" href="https://github.com/eliza3291/corona-statistics">						<p class="h3 mb-0"><i class="fab fa-github"></i></p>					</a>				</div>				<div class="col-auto">					<a class="fa-2x text-secondary" href="https://eliza3291.github.io/corona-statistics-doc/">						<p class="h3 mb-0"><i class="fas fa-book"></i></p>					</a>				</div>			</div>		</footer>		<!-- ============================================================== -->		<!-- End footer -->		<!-- ============================================================== -->	</div>	<!-- ============================================================== -->	<!-- End Page wrapper  -->	<!-- ============================================================== --></div></div>'
     var COMPONENTS = [{'name': 'AlertComponent', 'selector': 'app-alert'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'BreadcrumbComponent', 'selector': 'app-breadcrumb'},{'name': 'CoreComponent', 'selector': 'app-core'},{'name': 'GermanyMapComponent', 'selector': 'app-germany-map'},{'name': 'GermanyOverviewComponent', 'selector': ''},{'name': 'LineChartComponent', 'selector': 'app-line-chart'},{'name': 'TimeframeSelectorComponent', 'selector': 'app-timeframe-selector'}];
     var DIRECTIVES = [{'name': 'ResponsiveWidthDirective', 'selector': '[appResponsiveWidth]'}];
     var ACTUAL_COMPONENT = {'name': 'CoreComponent'};

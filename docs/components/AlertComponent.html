@@ -64,6 +64,13 @@
     <code>src/app/germany-overview/components/alert/alert.component.ts</code>
 </p>
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Component in charge to show alerts.</p>
+
+    </p>
 
 
     <p class="comment">
@@ -135,6 +142,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Public</span>
                                     <span class="modifier">Optional</span>
                                 <a href="#message">message</a>
                             </li>
@@ -183,7 +191,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/germany-overview/components/alert/alert.component.ts:13</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/germany-overview/components/alert/alert.component.ts:21</a></div>
                             </td>
                         </tr>
 
@@ -264,14 +272,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="24"
-                            class="link-to-prism">src/app/germany-overview/components/alert/alert.component.ts:24</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/germany-overview/components/alert/alert.component.ts:34</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Unsubscribe from alert service when the component is destroyed. </p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -303,14 +313,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="17"
-                            class="link-to-prism">src/app/germany-overview/components/alert/alert.component.ts:17</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="26"
+                            class="link-to-prism">src/app/germany-overview/components/alert/alert.component.ts:26</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Subscribe to alert service to start listening for possible alerts. </p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -333,6 +345,7 @@
                         <a name="message"></a>
                         <span class="name">
                             <b>
+                                <span class="modifier">Public</span>
                                 <span class="modifier">Optional</span>
                             message</b>
                             <a href="#message"><span class="icon ion-ios-link"></span></a>
@@ -347,7 +360,7 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/germany-overview/components/alert/alert.component.ts:13</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/germany-overview/components/alert/alert.component.ts:21</a></div>
                             </td>
                         </tr>
 
@@ -375,10 +388,16 @@
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/germany-overview/components/alert/alert.component.ts:12</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/germany-overview/components/alert/alert.component.ts:20</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Save subscription of the service to destroy afterwards </p>
+</div>
+                    </td>
+                </tr>
 
             </tbody>
         </table>
@@ -392,18 +411,27 @@
 import { Alert, AlertService } from &#x27;@common&#x27;;
 import { Subscription } from &#x27;rxjs&#x27;;
 
+/**
+ * Component in charge to show alerts.
+ */
 @Component({
 	selector: &#x27;app-alert&#x27;,
 	templateUrl: &#x27;./alert.component.html&#x27;,
 	styleUrls: [&#x27;./alert.component.scss&#x27;],
+	/** When angular triggers an error, the DOM is not updated.
+	 * To show the alert, the ChangeDetectionStrategy should be on push
+	 * so we can define when it should check it.
+	 */
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AlertComponent implements OnInit, OnDestroy {
+	/** Save subscription of the service to destroy afterwards */
 	private subscription: Subscription | undefined;
-	message?: Alert;
+	public message?: Alert;
 
 	constructor(private alertService: AlertService, private changeRef: ChangeDetectorRef) {}
 
+	/** Subscribe to alert service to start listening for possible alerts. */
 	ngOnInit(): void {
 		this.subscription &#x3D; this.alertService.alertSubscription().subscribe((message) &#x3D;&gt; {
 			this.message &#x3D; message;
@@ -411,6 +439,7 @@ export class AlertComponent implements OnInit, OnDestroy {
 		});
 	}
 
+	/** Unsubscribe from alert service when the component is destroyed. */
 	ngOnDestroy(): void {
 		if (this.subscription) {
 			this.subscription.unsubscribe();

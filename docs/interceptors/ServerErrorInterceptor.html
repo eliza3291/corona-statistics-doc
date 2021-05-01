@@ -60,6 +60,18 @@
             <code>src/app/common/interceptors/server-error.interceptor.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Intercept error from the backend to retry the request 1 time.
+When required multiple validations can be made like:</p>
+<ul>
+<li>Refresh token when 401</li>
+<li>Wait to make request when 429</li>
+</ul>
+
+            </p>
 
 
             <section>
@@ -118,8 +130,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="8"
-                            class="link-to-prism">src/app/common/interceptors/server-error.interceptor.ts:8</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="13"
+                            class="link-to-prism">src/app/common/interceptors/server-error.interceptor.ts:13</a></div>
                 </td>
             </tr>
 
@@ -189,6 +201,11 @@ import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpErrorResponse
 import { Observable, throwError } from &#x27;rxjs&#x27;;
 import { catchError, retry } from &#x27;rxjs/operators&#x27;;
 
+/** Intercept error from the backend to retry the request 1 time.
+ * When required multiple validations can be made like:
+ * - Refresh token when 401
+ * - Wait to make request when 429
+ */
 @Injectable()
 export class ServerErrorInterceptor implements HttpInterceptor {
 	intercept(request: HttpRequest&lt;unknown&gt;, next: HttpHandler): Observable&lt;HttpEvent&lt;unknown&gt;&gt; {
