@@ -28,79 +28,79 @@
 <title>cluster_GermanyOverviewModule_imports</title>
 <polygon fill="none" stroke="black" points="1074,-78 1074,-130 1250,-130 1250,-78 1074,-78"/>
 </g>
-<g id="clust11" class="cluster">
-<title>cluster_GermanyOverviewModule_providers</title>
-<polygon fill="none" stroke="black" points="898,-78 898,-130 1066,-130 1066,-78 898,-78"/>
-</g>
 <g id="clust2" class="cluster">
 <title>cluster_GermanyOverviewModule_declarations</title>
-<polygon fill="none" stroke="black" points="16,-78 16,-130 890,-130 890,-78 16,-78"/>
+<polygon fill="none" stroke="black" points="192,-78 192,-130 1066,-130 1066,-78 192,-78"/>
+</g>
+<g id="clust11" class="cluster">
+<title>cluster_GermanyOverviewModule_providers</title>
+<polygon fill="none" stroke="black" points="16,-78 16,-130 184,-130 184,-78 16,-78"/>
 </g>
 <!-- AlertComponent -->
 <g id="node1" class="node">
 <title>AlertComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="882.1,-122 771.9,-122 771.9,-86 882.1,-86 882.1,-122"/>
-<text text-anchor="middle" x="827" y="-99.8" font-family="Times,serif" font-size="14.00">AlertComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="1058.1,-122 947.9,-122 947.9,-86 1058.1,-86 1058.1,-122"/>
+<text text-anchor="middle" x="1003" y="-99.8" font-family="Times,serif" font-size="14.00">AlertComponent</text>
 </g>
 <!-- GermanyOverviewModule -->
 <g id="node6" class="node">
 <title>GermanyOverviewModule</title>
-<polygon fill="#8dd3c7" stroke="black" points="757.33,-187 754.33,-191 733.33,-191 730.33,-187 590.67,-187 590.67,-151 757.33,-151 757.33,-187"/>
-<text text-anchor="middle" x="674" y="-164.8" font-family="Times,serif" font-size="14.00">GermanyOverviewModule</text>
+<polygon fill="#8dd3c7" stroke="black" points="741.33,-187 738.33,-191 717.33,-191 714.33,-187 574.67,-187 574.67,-151 741.33,-151 741.33,-187"/>
+<text text-anchor="middle" x="658" y="-164.8" font-family="Times,serif" font-size="14.00">GermanyOverviewModule</text>
 </g>
 <!-- AlertComponent&#45;&gt;GermanyOverviewModule -->
 <g id="edge1" class="edge">
 <title>AlertComponent&#45;&gt;GermanyOverviewModule</title>
-<path fill="none" stroke="black" d="M827,-122.03C827,-138.4 827,-160 827,-160 827,-160 767.66,-160 767.66,-160"/>
-<polygon fill="black" stroke="black" points="767.66,-156.5 757.66,-160 767.66,-163.5 767.66,-156.5"/>
+<path fill="none" stroke="black" d="M1003,-122.11C1003,-141.34 1003,-169 1003,-169 1003,-169 751.51,-169 751.51,-169"/>
+<polygon fill="black" stroke="black" points="751.51,-165.5 741.51,-169 751.51,-172.5 751.51,-165.5"/>
 </g>
 <!-- GermanyMapComponent -->
 <g id="node2" class="node">
 <title>GermanyMapComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="753.58,-122 594.42,-122 594.42,-86 753.58,-86 753.58,-122"/>
-<text text-anchor="middle" x="674" y="-99.8" font-family="Times,serif" font-size="14.00">GermanyMapComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="929.58,-122 770.42,-122 770.42,-86 929.58,-86 929.58,-122"/>
+<text text-anchor="middle" x="850" y="-99.8" font-family="Times,serif" font-size="14.00">GermanyMapComponent</text>
 </g>
 <!-- GermanyMapComponent&#45;&gt;GermanyOverviewModule -->
 <g id="edge2" class="edge">
 <title>GermanyMapComponent&#45;&gt;GermanyOverviewModule</title>
-<path fill="none" stroke="black" d="M674,-122.11C674,-122.11 674,-140.99 674,-140.99"/>
-<polygon fill="black" stroke="black" points="670.5,-140.99 674,-150.99 677.5,-140.99 670.5,-140.99"/>
+<path fill="none" stroke="black" d="M850,-122.03C850,-138.4 850,-160 850,-160 850,-160 751.38,-160 751.38,-160"/>
+<polygon fill="black" stroke="black" points="751.38,-156.5 741.38,-160 751.38,-163.5 751.38,-156.5"/>
 </g>
 <!-- GermanyOverviewComponent -->
 <g id="node3" class="node">
 <title>GermanyOverviewComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="576.11,-122 387.89,-122 387.89,-86 576.11,-86 576.11,-122"/>
-<text text-anchor="middle" x="482" y="-99.8" font-family="Times,serif" font-size="14.00">GermanyOverviewComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="752.11,-122 563.89,-122 563.89,-86 752.11,-86 752.11,-122"/>
+<text text-anchor="middle" x="658" y="-99.8" font-family="Times,serif" font-size="14.00">GermanyOverviewComponent</text>
 </g>
 <!-- GermanyOverviewComponent&#45;&gt;GermanyOverviewModule -->
 <g id="edge3" class="edge">
 <title>GermanyOverviewComponent&#45;&gt;GermanyOverviewModule</title>
-<path fill="none" stroke="black" d="M482,-122.03C482,-138.4 482,-160 482,-160 482,-160 580.62,-160 580.62,-160"/>
-<polygon fill="black" stroke="black" points="580.62,-163.5 590.62,-160 580.62,-156.5 580.62,-163.5"/>
+<path fill="none" stroke="black" d="M658,-122.11C658,-122.11 658,-140.99 658,-140.99"/>
+<polygon fill="black" stroke="black" points="654.5,-140.99 658,-150.99 661.5,-140.99 654.5,-140.99"/>
 </g>
 <!-- LineChartComponent -->
 <g id="node4" class="node">
 <title>LineChartComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="370.09,-122 231.91,-122 231.91,-86 370.09,-86 370.09,-122"/>
-<text text-anchor="middle" x="301" y="-99.8" font-family="Times,serif" font-size="14.00">LineChartComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="546.09,-122 407.91,-122 407.91,-86 546.09,-86 546.09,-122"/>
+<text text-anchor="middle" x="477" y="-99.8" font-family="Times,serif" font-size="14.00">LineChartComponent</text>
 </g>
 <!-- LineChartComponent&#45;&gt;GermanyOverviewModule -->
 <g id="edge4" class="edge">
 <title>LineChartComponent&#45;&gt;GermanyOverviewModule</title>
-<path fill="none" stroke="black" d="M301,-122.11C301,-141.34 301,-169 301,-169 301,-169 580.29,-169 580.29,-169"/>
-<polygon fill="black" stroke="black" points="580.29,-172.5 590.29,-169 580.29,-165.5 580.29,-172.5"/>
+<path fill="none" stroke="black" d="M477,-122.03C477,-138.4 477,-160 477,-160 477,-160 564.65,-160 564.65,-160"/>
+<polygon fill="black" stroke="black" points="564.65,-163.5 574.65,-160 564.65,-156.5 564.65,-163.5"/>
 </g>
 <!-- TimeframeSelectorComponent -->
 <g id="node5" class="node">
 <title>TimeframeSelectorComponent</title>
-<polygon fill="#ffffb3" stroke="black" points="213.89,-122 24.11,-122 24.11,-86 213.89,-86 213.89,-122"/>
-<text text-anchor="middle" x="119" y="-99.8" font-family="Times,serif" font-size="14.00">TimeframeSelectorComponent</text>
+<polygon fill="#ffffb3" stroke="black" points="389.89,-122 200.11,-122 200.11,-86 389.89,-86 389.89,-122"/>
+<text text-anchor="middle" x="295" y="-99.8" font-family="Times,serif" font-size="14.00">TimeframeSelectorComponent</text>
 </g>
 <!-- TimeframeSelectorComponent&#45;&gt;GermanyOverviewModule -->
 <g id="edge5" class="edge">
 <title>TimeframeSelectorComponent&#45;&gt;GermanyOverviewModule</title>
-<path fill="none" stroke="black" d="M119,-122.29C119,-144.21 119,-178 119,-178 119,-178 580.61,-178 580.61,-178"/>
-<polygon fill="black" stroke="black" points="580.61,-181.5 590.61,-178 580.61,-174.5 580.61,-181.5"/>
+<path fill="none" stroke="black" d="M295,-122.11C295,-141.34 295,-169 295,-169 295,-169 564.26,-169 564.26,-169"/>
+<polygon fill="black" stroke="black" points="564.26,-172.5 574.26,-169 564.26,-165.5 564.26,-172.5"/>
 </g>
 <!-- ResponsiveWidthModule -->
 <g id="node7" class="node">
@@ -111,20 +111,20 @@
 <!-- ResponsiveWidthModule&#45;&gt;GermanyOverviewModule -->
 <g id="edge6" class="edge">
 <title>ResponsiveWidthModule&#45;&gt;GermanyOverviewModule</title>
-<path fill="none" stroke="black" d="M1162,-122.29C1162,-144.21 1162,-178 1162,-178 1162,-178 767.34,-178 767.34,-178"/>
-<polygon fill="black" stroke="black" points="767.34,-174.5 757.34,-178 767.34,-181.5 767.34,-174.5"/>
+<path fill="none" stroke="black" d="M1162,-122.29C1162,-144.21 1162,-178 1162,-178 1162,-178 751.51,-178 751.51,-178"/>
+<polygon fill="black" stroke="black" points="751.51,-174.5 741.51,-178 751.51,-181.5 751.51,-174.5"/>
 </g>
 <!-- GermanyService -->
 <g id="node8" class="node">
 <title>GermanyService</title>
-<ellipse fill="#fdb462" stroke="black" cx="982" cy="-104" rx="75.84" ry="18"/>
-<text text-anchor="middle" x="982" y="-99.8" font-family="Times,serif" font-size="14.00">GermanyService</text>
+<ellipse fill="#fdb462" stroke="black" cx="100" cy="-104" rx="75.84" ry="18"/>
+<text text-anchor="middle" x="100" y="-99.8" font-family="Times,serif" font-size="14.00">GermanyService</text>
 </g>
 <!-- GermanyService&#45;&gt;GermanyOverviewModule -->
 <g id="edge7" class="edge">
 <title>GermanyService&#45;&gt;GermanyOverviewModule</title>
-<path fill="none" stroke="black" d="M982,-122.11C982,-141.34 982,-169 982,-169 982,-169 767.35,-169 767.35,-169"/>
-<polygon fill="black" stroke="black" points="767.35,-165.5 757.35,-169 767.35,-172.5 767.35,-165.5"/>
+<path fill="none" stroke="black" d="M100,-122.29C100,-144.21 100,-178 100,-178 100,-178 564.46,-178 564.46,-178"/>
+<polygon fill="black" stroke="black" points="564.46,-181.5 574.46,-178 564.46,-174.5 564.46,-181.5"/>
 </g>
 </g>
 </svg>

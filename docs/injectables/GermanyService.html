@@ -367,7 +367,7 @@ export class GermanyService {
 						});
 					}
 					if (response.features &amp;&amp; Array.isArray(response.features) &amp;&amp; response.features.length &gt; 0) {
-						response.features.reverse().forEach((feature: Feature) &#x3D;&gt; {
+						response.features.forEach((feature: Feature) &#x3D;&gt; {
 							mappedResponse.push({
 								cases: feature.attributes.cases,
 								deaths: feature.attributes.deaths,
@@ -421,7 +421,7 @@ export class GermanyService {
 						});
 					}
 					if (response.features &amp;&amp; Array.isArray(response.features) &amp;&amp; response.features.length &gt; 0) {
-						response.features.reverse().forEach((feature: Feature) &#x3D;&gt; {
+						response.features.forEach((feature: Feature) &#x3D;&gt; {
 							mappedResponse.data.push({
 								cases: feature.attributes.cases,
 								deaths: feature.attributes.deaths,
