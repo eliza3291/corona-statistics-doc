@@ -358,17 +358,17 @@ export class Timeseries extends Array&lt;TimeseriesData&gt; {
 	}
 
 	/** Summary of total cases */
-	getTotalCases(): number {
+	get totalCases(): number {
 		return this.reduce((a, b) &#x3D;&gt; a + (b.cases || 0), 0);
 	}
 
 	/** Summary of total deaths */
-	getTotalDeaths(): number {
+	get totalDeaths(): number {
 		return this.reduce((a, b) &#x3D;&gt; a + (b.deaths || 0), 0);
 	}
 
 	/** Summary of total recovered */
-	getTotalRecovered(): number {
+	get totalRecovered(): number {
 		return this.reduce((a, b) &#x3D;&gt; a + (b.recovered || 0), 0);
 	}
 

@@ -1005,9 +1005,9 @@ export class GermanyOverviewComponent implements OnInit {
 		 * If alert was shown, remove any old alert.
 		 */
 		this.alertService.remove();
-		this.dataTotals.cases &#x3D; timeseries.getTotalCases();
-		this.dataTotals.deaths &#x3D; timeseries.getTotalDeaths();
-		this.dataTotals.recovered &#x3D; timeseries.getTotalRecovered();
+		this.dataTotals.cases &#x3D; timeseries.totalCases;
+		this.dataTotals.deaths &#x3D; timeseries.totalDeaths;
+		this.dataTotals.recovered &#x3D; timeseries.totalRecovered;
 		this.timeseriesCases &#x3D; timeseries.getChartSeries(&#x27;cases&#x27;);
 		this.timeseriesDeaths &#x3D; timeseries.getChartSeries(&#x27;deaths&#x27;);
 		this.timeseriesRecovered &#x3D; timeseries.getChartSeries(&#x27;recovered&#x27;);

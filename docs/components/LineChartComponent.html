@@ -421,8 +421,8 @@ Two types of tooltip are inside the chart (Series and specific selection of a po
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="86"
-                            class="link-to-prism">src/app/germany-overview/components/line-chart/line-chart.component.ts:86</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/app/germany-overview/components/line-chart/line-chart.component.ts:85</a></div>
                 </td>
             </tr>
 
@@ -430,7 +430,7 @@ Two types of tooltip are inside the chart (Series and specific selection of a po
             <tr>
                 <td class="col-md-4">
                     <div class="io-description"><p>The unit of the values inside the chart is persons, so 0.8 persons is not an accurate value.
-Acurrate value should be: 0 persons, 1 person, or N persons.</p>
+Accurate value should be: 0 persons, 1 person, or N persons.</p>
 </div>
 
                     <div class="io-description">
@@ -786,7 +786,7 @@ export class LineChartComponent {
 		const mouseleave &#x3D; new MouseEvent(&#x27;mouseleave&#x27;, { bubbles: true, cancelable: true });
 		const containerElement &#x3D; this.lineChartContainer?.nativeElement;
 		const tooltipAreaSerie &#x3D; containerElement?.querySelector(&#x27;.tooltip-area&#x27;) as HTMLElement;
-		const tooltipAreaCircle &#x3D; containerElement?.querySelector(&#x27;circle&#x27;);
+		const tooltipAreaCircle &#x3D; containerElement?.querySelector(&#x27;circle&#x27;) as SVGCircleElement;
 		tooltipAreaSerie?.dispatchEvent(mouseleave);
 		tooltipAreaCircle?.dispatchEvent(mouseleave);
 	}
@@ -796,21 +796,20 @@ export class LineChartComponent {
 	 */
 	setViewWidth(): void {
 		const innerWidth &#x3D; window.innerWidth;
-		const maxLength &#x3D; this.results.getMaxLength() - 1;
+		const maxLength &#x3D; this.results.maxLength - 1;
 
-		ITEMS_PER_BREAKPOINT.some((element) &#x3D;&gt; {
-			if (innerWidth &lt; element.width) {
-				this.viewWidth &#x3D; maxLength &gt; element.nrItems ? DEFAULT_ITEM_WIDTH * maxLength : 0;
-				return true;
-			}
+		const breakpoint &#x3D; ITEMS_PER_BREAKPOINT.find((element) &#x3D;&gt; innerWidth &lt; element.width);
+
+		if (breakpoint) {
+			this.viewWidth &#x3D; maxLength &gt; breakpoint.nrItems ? DEFAULT_ITEM_WIDTH * maxLength : 0;
+		} else {
 			this.viewWidth &#x3D; 0;
-			return false;
-		});
+		}
 	}
 
 	/**
 	 * The unit of the values inside the chart is persons, so 0.8 persons is not an accurate value.
-	 * Acurrate value should be: 0 persons, 1 person, or N persons.
+	 * Accurate value should be: 0 persons, 1 person, or N persons.
 	 */
 	yAxisTickFormatting(val: number): string {
 		if (val % 1 &#x3D;&#x3D;&#x3D; 0) {
